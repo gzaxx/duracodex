@@ -1,0 +1,153 @@
+@import 'less/vars';
+@import 'less/functions';
+@import 'less/helpers';
+
+body {
+    font-family: @font-fam;
+    max-width: 100%;
+}
+
+.header {
+    text-align: center;    
+
+    a {
+        display: block;
+        padding: 0.5em 1em;
+    }
+
+    img {        
+        max-width: 470px;
+    }
+}
+
+a {
+    color: @color-black;
+    white-space: nowrap;
+    text-decoration: none;    
+
+    &:hover, &:focus {
+        color: lighten(@color-black, 50%);
+        text-decoration: none;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    width: 100%;        
+    border-bottom: 1px solid darken(#d2d6d8, 30%);
+
+    .res-md({
+        margin-top: 2.5em;
+    });
+
+    .fs(normal, 0.75);
+
+    ul {
+        list-style: none;
+        white-space: nowrap;
+        .p0();
+        max-height: 56px;        
+        text-align: center;
+
+        .res-md({
+            text-align: left;
+        });
+
+        li {
+            display: inline-block;            
+        }
+    }
+
+    ul.navig {                
+        li {                        
+            &:last-child {
+                a {
+                    border-right: none;
+                }
+            }
+
+            a {
+                padding: 5px 15px;
+                transition: all .2s ease-out;
+                border-right: 1px solid #d2d6d8;
+
+                .res-sd({
+                    padding: 0 40px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                });
+            }
+        }
+    }
+
+    ul.social {
+        .res-md({
+            text-align: right;
+            margin-right: 30px;
+        });
+
+        li {
+            a {
+                padding: 0 10px;
+                transition: all .2s ease-out;
+                .fs(normal, 1.15);
+
+                .res-sd({
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                });
+            }
+        }
+    }
+}
+
+.content {
+    .mt();
+    .fs();
+
+    .post {
+        &:not(:first-child) {
+            .mt();
+        }
+    }
+
+    .title {
+        text-align: center;
+        .res-sd({
+            text-align: left;
+        });
+
+        div.sub {            
+            color: lighten(@color-black, 35%);            
+            margin: .5em 0;
+
+            .res-sd({
+                .mt0();
+                .mb0();
+                .mr();
+                display: inline-block;
+                text-align: left;
+            });
+        }
+    }
+
+    p {
+        .fs(normal, 0.85);
+
+        a {
+            color: @color-light-blue-x;
+        }
+    }
+}
+
+.footer {
+    .copy {
+        text-align: center;
+    }
+}

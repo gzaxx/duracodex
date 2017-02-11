@@ -1,0 +1,45 @@
+.m0 {
+  margin: 0;
+}
+.ml0 {
+  margin-left: 0;
+}
+.mr0 {
+  margin-right: 0;
+}
+.mt0 {
+  margin-top: 0;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.p0 {
+  padding: 0;
+}
+.pl0 {
+  padding-left: 0;
+}
+.pr0 {
+  padding-right: 0;
+}
+.pt0 {
+  padding-top: 0;
+}
+.pb0 {
+  padding-bottom: 0;
+}
+.ma {
+  margin: 2.5em;
+}
+.mt {
+  margin-top: 2.5em;
+}
+.mr {
+  margin-right: 2.5em;
+}
+.mb {
+  margin-bottom: 2.5em;
+}
+.ml {
+  margin-left: 2.5em;
+}

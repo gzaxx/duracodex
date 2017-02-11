@@ -1,0 +1,52 @@
+@import (less) 'vars';
+
+.responsive(@minWidth, @rules) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+.responsive-max(@maxWidth, @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.res-max-sd(@rules) {
+    .responsive-max(@bp-sd, @rules);
+}
+
+.res-xs(@rules) {
+    .responsive(@bp-xs, @rules);
+}
+
+.res-sd(@rules) {
+    .responsive(@bp-sd, @rules);
+}
+
+.res-md(@rules) {
+    .responsive(@bp-md, @rules);
+}
+
+.res-ld(@rules) {
+    .responsive(@bp-ld, @rules);
+}
+
+.fs(@weight: normal, @size: 1, @color: @color-black) {
+    font-family: @font-fam;
+    font-weight: @weight;
+    color: @color;
+    font-size: @font-size--small * @size;
+
+    .responsive(@bp-sd; {
+        font-size: @font-size--small * @size;
+    });
+
+    .responsive(@bp-md; {
+        font-size: @font-size--medium * @size;
+    });
+
+    .responsive(@bp-ld; {
+        font-size: @font-size--large * @size;
+    });
+}
